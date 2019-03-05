@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.pedrong'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Kafka streams
+    compile group: 'org.apache.kafka', name: 'kafka-streams', version: '2.1.0'
+
+    // Logging
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.11.1'
+    
+    // Testing
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
